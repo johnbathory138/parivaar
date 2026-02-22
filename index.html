@@ -6,6 +6,7 @@
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-K99V7XFX');</script>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Parivaar Alma de la India | Clases y Presentaciones</title>
@@ -18,7 +19,25 @@
 
     <style>
         body { font-family: 'Arial', sans-serif; margin: 0; color: #333; text-align: center; line-height: 1.6; }
-        header { background: #ff9933; color: white; padding: 2rem; }
+        
+        /* Ajuste del Header con Imagen de Fondo */
+        header { 
+            background: linear-gradient(rgba(255, 153, 51, 0.8), rgba(255, 153, 51, 0.8)), url('imagen/logo.jpeg');
+            background-size: cover;
+            background-position: center;
+            color: white; 
+            padding: 4rem 2rem; 
+        }
+
+        header h1 { 
+            font-size: 3rem; 
+            margin: 0; 
+            line-height: 1.1;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        header span { display: block; font-size: 1.5rem; margin-top: 10px; font-weight: normal; }
+
         .hero { padding: 40px 20px; background: #f4f4f4; }
         .cta-button { 
             background: #138808; color: white; padding: 15px 30px; 
@@ -34,8 +53,9 @@
 <body>
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K99V7XFX"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    
     <header>
-        <h1>Parivaar Alma de la India</h1>
+        <h1>Parivaar <br><span>Alma de la India</span></h1>
         <p>Danza, Yoga, Bodas y más...</p>
     </header>
 
