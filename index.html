@@ -6,48 +6,83 @@
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-K99V7XFX');</script>
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Parivaar Alma de la India | Clases y Presentaciones</title>
     
     <meta property="og:title" content="Parivaar Alma de la India - Presentaciones Profesionales">
     <meta property="og:description" content="Reserva un show de danza para tu restaurante o evento.">
-    <meta property="og:image" content="imagen/taller_primavera.jpeg">
+    <meta property="og:image" content="imagen/clases.jpeg">
     
     <link rel="icon" type="image/png" href="imagen/logo.jpeg">
 
     <style>
         body { font-family: 'Arial', sans-serif; margin: 0; color: #333; text-align: center; line-height: 1.6; }
         
-        /* Ajuste del Header con Imagen de Fondo */
+        /* Header con logo de fondo naranja */
         header { 
             background: linear-gradient(rgba(255, 153, 51, 0.8), rgba(255, 153, 51, 0.8)), url('imagen/logo.jpeg');
             background-size: cover;
             background-position: center;
             color: white; 
-            padding: 4rem 2rem; 
+            padding: 3rem 2rem; 
         }
 
-        header h1 { 
+        header h1 { font-size: 2.8rem; margin: 0; line-height: 1.1; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
+        header span { display: block; font-size: 1.4rem; margin-top: 10px; font-weight: normal; }
+
+        /* SECCIÓN HERO CON IMAGEN clases.jpeg DE FONDO COMPLETO */
+        .hero { 
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('imagen/clases.jpeg');
+            background-size: cover;
+            background-position: center;
+            padding: 120px 20px; 
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero h2 { 
             font-size: 3rem; 
-            margin: 0; 
-            line-height: 1.1;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            margin-bottom: 10px;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.8); 
         }
 
-        header span { display: block; font-size: 1.5rem; margin-top: 10px; font-weight: normal; }
+        .hero p { 
+            font-size: 1.5rem; 
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+        }
 
-        .hero { padding: 40px 20px; background: #f4f4f4; }
         .cta-button { 
-            background: #138808; color: white; padding: 15px 30px; 
-            text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block;
+            background: #138808; color: white; padding: 18px 35px; 
+            text-decoration: none; border-radius: 5px; font-weight: bold; 
+            display: inline-block;
+            font-size: 1.2rem;
+            transition: transform 0.3s ease, background 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
         }
-        .section-title { margin-top: 40px; color: #ff9933; }
+        
+        .cta-button:hover { 
+            transform: scale(1.05); 
+            background: #0e6606;
+        }
+
+        .section-title { margin-top: 40px; color: #ff9933; font-size: 2rem; }
+        
+        /* Galería */
         .gallery { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; padding: 20px; }
-        .gallery img, .gallery video { width: 100%; max-width: 300px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-        .evento-proximo { background: #fff3e0; padding: 30px; border: 2px dashed #ff9933; margin: 20px; }
-        .social-links a { margin: 0 10px; text-decoration: none; color: #138808; font-weight: bold; }
+        .gallery img, .gallery video { width: 100%; max-width: 350px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        
+        /* Evento Próximo */
+        .evento-proximo { background: #fff3e0; padding: 40px 20px; border: 2px dashed #ff9933; margin: 30px 20px; border-radius: 15px; }
+        
+        .social-links { padding: 40px 20px; background: #f9f9f9; }
+        .social-links a { margin: 0 15px; text-decoration: none; color: #138808; font-weight: bold; font-size: 1.1rem; }
+        
+        footer { padding: 30px; background: #333; color: white; font-size: 0.9rem; }
     </style>
 </head>
 <body>
@@ -61,20 +96,20 @@
 
     <section class="hero">
         <h2>Clases y Shows para Eventos</h2>
-        <p>Vive la magia de Bollywood y la danza clásica Kathak.</p>
+        <p>Vive la magia de la India y Medio Oriente</p>
         <a href="https://wa.me/+523312695435" class="cta-button">Contratar Presentación</a>
     </section>
 
     <section class="evento-proximo">
         <h2 class="section-title">¡Próximo Evento!</h2>
-        <img src="imagen/taller_primavera.jpeg" alt="Próximo Evento de Danza India" style="max-width: 100%; height: auto;">
-        <p>Acompáñanos en nuestra próxima presentación temática. ¡No te lo pierdas!</p>
+        <img src="imagen/taller_primavera.jpeg" alt="Próximo Evento de Danza India" style="max-width: 100%; height: auto; border-radius: 10px; margin: 20px 0;">
+        <p>Acompáñanos en nuestra próxima presentación temática. ¡Inscríbete ahora!</p>
     </section>
 
     <h2 class="section-title">Galería de Arte</h2>
     <div class="gallery">
-        <img src="imagen/punjabi.jpeg" alt="Danza India 1">
-        <img src="imagen/chari.jpeg" alt="Danza India 2">
+        <img src="imagen/punjabi.jpeg" alt="Danza India Punjabi">
+        <img src="imagen/chari.jpeg" alt="Danza India Chari">
         <video controls>
             <source src="video/evento1.mp4" type="video/mp4">
             Tu navegador no soporta videos.
@@ -87,8 +122,9 @@
         <a href="https://tiktok.com/@aishaaguirre21" target="_blank">TikTok</a>
     </div>
 
-    <footer style="margin-top: 50px; padding: 20px; background: #333; color: white;">
+    <footer>
         <p>&copy; 2026 NEO System - Impulsando el Arte Digital</p>
     </footer>
 </body>
 </html>
+
