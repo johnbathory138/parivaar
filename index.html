@@ -13,7 +13,7 @@
     <meta property="og:title" content="Parivaar Alma de la India - Presentaciones Profesionales">
     <meta property="og:description" content="Reserva un show de danza para tu restaurante o evento.">
     <meta property="og:image" content="imagen/clases.jpeg">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="icon" type="image/jpeg" href="imagen/logo.jpeg">
 
     <style>
@@ -81,7 +81,20 @@
         
         .social-links { padding: 40px 20px; background: #f9f9f9; }
         .social-links a { margin: 0 15px; text-decoration: none; color: #138808; font-weight: bold; font-size: 1.1rem; }
-        
+        /* Estilos actualizados para Logos Grandes */
+        .social-links a { 
+            margin: 0 25px; 
+            text-decoration: none; 
+            color: #138808; 
+            font-size: 3.5rem; /* Aumentamos de 2.5 a 3.5 para un mayor impacto visual */
+            transition: transform 0.3s ease, color 0.3s ease; 
+            display: inline-block;
+        }
+
+        .social-links a:hover { 
+            transform: scale(1.25); /* Se agranda un poco más al pasar el mouse */
+            color: #ff9933; /* Cambia al color naranja institucional al contacto */
+        }
         footer { padding: 30px; background: #333; color: white; font-size: 0.9rem; }
     </style>
 </head>
@@ -117,9 +130,19 @@
     </div>
 
     <div class="social-links">
-        <h2 class="section-title">Síguenos</h2>
-        <a href="https://instagram.com/parivaar_by_aishaguirre" target="_blank">Instagram</a>
-        <a href="https://tiktok.com/@aishaaguirre21" target="_blank">TikTok</a>
+        <h2 class="section-title">Síguenos y Contáctanos</h2>
+        
+        <a href="https://instagram.com/parivaar_by_aishaguirre" target="_blank" title="Instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+        
+        <a href="https://tiktok.com/@aishaaguirre21" target="_blank" title="TikTok">
+            <i class="fab fa-tiktok"></i>
+        </a>
+
+        <a href="https://wa.me/+523312695435" target="_blank" title="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
     </div>
 
     <footer>
@@ -127,5 +150,6 @@
     </footer>
 </body>
 </html>
+
 
 
