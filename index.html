@@ -97,13 +97,39 @@
         </div>
     </section>
 
+    <section id="danza" class="section">
+        <h2 style="color: var(--naranja); text-align: center;">Clases y Shows de Danza</h2>
+        <div style="max-width: 800px; margin: 0 auto 30px; text-align: center; line-height: 1.6;">
+            <p><strong>Descubre el Arte del Movimiento:</strong> Formación integral en danzas de la India y Medio Oriente. Ofrecemos <strong>clases presenciales</strong> en Guadalajara y <strong>clases en línea</strong>. Un espacio para disciplina, ejercicio y profesionalismo.</p>
+        </div>
+        <div class="grid">
+            <div class="card">
+                <img src="imagen/danza.jpeg" alt="Formación en Danza">
+                <p style="font-weight: bold;">Formación Académica</p>
+            </div>
+            <div class="card">
+                <video controls>
+                    <source src="video/evento1.mp4" type="video/mp4">
+                </video>
+                <p style="font-weight: bold;">Presentaciones Profesionales</p>
+            </div>
+            <div class="card">
+                <img src="imagen/punjabi.jpeg" alt="Danza Punjabi">
+                <p style="font-weight: bold;">Estilos Tradicionales</p>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 40px;">
+            <button class="btn-buy" style="width: auto; padding: 15px 40px;" onclick="cotizarServicio('Danza')">
+                <i class="fab fa-whatsapp"></i> Solicitar Informes o Inscripción
+            </button>
+        </div>
+    </section>
+
     <section id="henna" class="section">
         <h2 style="color: var(--naranja); text-align: center;">Arte Mehndi Halal y Orgánico</h2>
-        
         <div style="max-width: 800px; margin: 0 auto 30px; text-align: center; line-height: 1.6;">
-            <p><strong>Pureza y Tradición:</strong> En Parivaar, respetamos nuestras raíces y creencias musulmanas. Utilizamos únicamente henna 100% orgánica, libre de toxinas y colorantes artificiales. Nuestra mezcla es segura para la piel y apta para el Wudu (Halal), permitiendo una experiencia artística ética y espiritual.</p>
+            <p><strong>Pureza y Tradición:</strong> Henna 100% orgánica, libre de toxinas. Segura para la piel y apta para el Wudu (Halal), respetando nuestras raíces musulmanas.</p>
         </div>
-
         <div class="grid">
             <div class="card">
                 <video controls>
@@ -122,9 +148,8 @@
                 <p style="font-weight: bold;">Experiencia Parivaar</p>
             </div>
         </div>
-
         <div style="text-align: center; margin-top: 40px;">
-            <button class="btn-buy" style="width: auto; padding: 15px 40px; font-size: 1.2rem;" onclick="cotizarServicio('Henna')">
+            <button class="btn-buy" style="width: auto; padding: 15px 40px;" onclick="cotizarServicio('Henna')">
                 <i class="fab fa-whatsapp"></i> Solicitar Cotización de Henna
             </button>
         </div>
@@ -134,11 +159,9 @@
         <h2 style="text-align: center;">Mi Carrito de Compras</h2>
         <div id="cart-items" style="max-width: 600px; margin: auto; background: white; padding: 20px; border-radius: 10px;"></div>
         <h3 style="text-align: center;">Total a pagar: $<span id="cart-total">0</span></h3>
-        
         <div style="max-width: 400px; margin: 30px auto; text-align: left;">
             <label>Nombre Completo:</label>
             <input type="text" id="cust-name" style="width:100%; padding:10px; margin: 10px 0;" placeholder="Ej. Aisha Aguirre">
-            
             <label>Método de Pago:</label>
             <select id="pay-method" style="width:100%; padding:10px; margin: 10px 0;">
                 <option value="Pago contra entrega">Pago contra entrega</option>
@@ -160,13 +183,22 @@
     <footer style="background: #333; color: white; padding: 60px 20px; text-align: center;">
         <div class="social-links">
             <h2 style="color: var(--naranja); font-size: 1.8rem; margin-bottom: 25px;">Conecta con nosotros</h2>
-            <div style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap;">
+            <div style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; margin-bottom: 30px;">
                 <a href="https://instagram.com/parivaar_by_aishaguirre" target="_blank" style="color: #E1306C;"><i class="fab fa-instagram"></i></a>
                 <a href="https://tiktok.com/@aishaaguirre21" target="_blank" style="color: #fff;"><i class="fab fa-tiktok"></i></a>
                 <a href="https://wa.me/523312695435" target="_blank" style="color: #25D366;"><i class="fab fa-whatsapp"></i></a>
             </div>
         </div>
+
+        <div style="margin: 30px 0; font-size: 1rem; color: #bbb;">
+            <h3 style="color: var(--naranja); margin-bottom: 10px;">Horario de Atención</h3>
+            <p><i class="far fa-clock"></i> Lunes a Viernes: 10:00 AM - 8:00 PM</p>
+            <p><i class="far fa-clock"></i> Sábados: 10:00 AM - 2:00 PM</p>
+            <p>Domingos: Cerrado</p>
+        </div>
+
         <hr style="border: 0; border-top: 1px solid #555; width: 80%; margin: 40px auto;">
+        
         <div style="font-size: 0.9rem; line-height: 1.6;">
             <p><strong>Parivaar Alma de la India</strong></p>
             <p>Guadalajara, Jalisco, México</p>
@@ -176,19 +208,16 @@
 
     <script>
         let cart = [];
-
         function showSection(id) {
             document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
             document.getElementById(id).classList.add('active');
             window.scrollTo(0,0);
         }
-
         function addToCart(name, price) {
             cart.push({name, price});
             updateCart();
             alert("¡Agregado!");
         }
-
         function updateCart() {
             document.getElementById('cart-counter').innerText = cart.length;
             const container = document.getElementById('cart-items');
@@ -202,17 +231,14 @@
             });
             document.getElementById('cart-total').innerText = total;
         }
-
         function removeItem(index) {
             cart.splice(index, 1);
             updateCart();
         }
-
         function cotizarServicio(servicio) {
-            let msg = `*SOLICITUD DE COTIZACIÓN - ${servicio.toUpperCase()}*%0A%0AHola, me gustaría recibir más información sobre sus servicios de ${servicio}.`;
+            let msg = `*SOLICITUD DE INFORMES - ${servicio.toUpperCase()}*%0A%0AHola, me gustaría recibir más información sobre sus servicios y horarios de ${servicio}.`;
             window.open(`https://wa.me/523312695435?text=${msg}`, '_blank');
         }
-
         function sendWhatsApp() {
             const name = document.getElementById('cust-name').value;
             const pay = document.getElementById('pay-method').value;
