@@ -6,150 +6,225 @@
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-K99V7XFX');</script>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parivaar Alma de la India | Clases y Presentaciones</title>
-    
-    <meta property="og:title" content="Parivaar Alma de la India - Presentaciones Profesionales">
-    <meta property="og:description" content="Reserva un show de danza para tu restaurante o evento.">
-    <meta property="og:image" content="imagen/clases.jpeg">
+    <title>Parivaar | Inicio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="icon" type="image/jpeg" href="imagen/logo.jpeg">
-
+    
     <style>
-        body { font-family: 'Arial', sans-serif; margin: 0; color: #333; text-align: center; line-height: 1.6; }
+        :root { --naranja: #ff9933; --verde: #138808; --blanco: #ffffff; }
+        body { font-family: 'Arial', sans-serif; margin: 0; background: #f4f4f4; color: #333; }
         
-        /* Header con logo de fondo naranja */
-        header { 
-            background: linear-gradient(rgba(255, 153, 51, 0.8), rgba(255, 153, 51, 0.8)), url('imagen/logo.jpeg');
-            background-size: cover;
-            background-position: center;
-            color: white; 
-            padding: 3rem 2rem; 
-        }
-
-        header h1 { font-size: 2.8rem; margin: 0; line-height: 1.1; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
-        header span { display: block; font-size: 1.4rem; margin-top: 10px; font-weight: normal; }
-
-        /* SECCIÓN HERO CON IMAGEN clases.jpeg DE FONDO COMPLETO */
         .hero { 
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('imagen/clases.jpeg');
-            background-size: cover;
-            background-position: center;
-            padding: 120px 20px; 
-            color: white;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('imagen/clases.jpeg'); 
+            background-size: cover; background-position: center; 
+            height: 80vh; color: white; display: flex; flex-direction: column; 
+            justify-content: center; align-items: center; text-align: center;
         }
 
-        .hero h2 { 
-            font-size: 3rem; 
-            margin-bottom: 10px;
-            text-shadow: 3px 3px 6px rgba(0,0,0,0.8); 
-        }
+        nav { background: var(--naranja); padding: 15px; position: sticky; top: 0; z-index: 1000; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
+        nav button { background: white; border: none; padding: 10px 18px; border-radius: 5px; cursor: pointer; font-weight: bold; color: var(--naranja); transition: 0.3s; }
+        nav button:hover { background: var(--verde); color: white; }
 
-        .hero p { 
-            font-size: 1.5rem; 
-            margin-bottom: 30px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
-        }
+        .section { display: none; padding: 50px 20px; min-height: 60vh; }
+        .active { display: block; }
 
-        .cta-button { 
-            background: #138808; color: white; padding: 18px 35px; 
-            text-decoration: none; border-radius: 5px; font-weight: bold; 
-            display: inline-block;
-            font-size: 1.2rem;
-            transition: transform 0.3s ease, background 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-        }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; max-width: 1200px; margin: auto; }
+        .card { background: white; padding: 20px; border-radius: 15px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); text-align: center; }
+        .card img, .card video { width: 100%; border-radius: 10px; margin-bottom: 15px; }
         
-        .cta-button:hover { 
-            transform: scale(1.05); 
-            background: #0e6606;
-        }
-
-        .section-title { margin-top: 40px; color: #ff9933; font-size: 2rem; }
+        .social-links a { margin: 0 20px; font-size: 3.5rem; color: var(--verde); transition: 0.3s; display: inline-block; text-decoration: none; }
+        .social-links a:hover { transform: scale(1.2); color: var(--naranja); }
         
-        /* Galería */
-        .gallery { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; padding: 20px; }
-        .gallery img, .gallery video { width: 100%; max-width: 350px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
-        
-        /* Evento Próximo */
-        .evento-proximo { background: #fff3e0; padding: 40px 20px; border: 2px dashed #ff9933; margin: 30px 20px; border-radius: 15px; }
-        
-        .social-links { padding: 40px 20px; background: #f9f9f9; }
-        .social-links a { margin: 0 15px; text-decoration: none; color: #138808; font-weight: bold; font-size: 1.1rem; }
-        /* Estilos actualizados para Logos Grandes */
-        .social-links a { 
-            margin: 0 25px; 
-            text-decoration: none; 
-            color: #138808; 
-            font-size: 3.5rem; /* Aumentamos de 2.5 a 3.5 para un mayor impacto visual */
-            transition: transform 0.3s ease, color 0.3s ease; 
-            display: inline-block;
-        }
-
-        .social-links a:hover { 
-            transform: scale(1.25); /* Se agranda un poco más al pasar el mouse */
-            color: #ff9933; /* Cambia al color naranja institucional al contacto */
-        }
-        footer { padding: 30px; background: #333; color: white; font-size: 0.9rem; }
+        #cart-counter { background: #e74c3c; color: white; border-radius: 50%; padding: 2px 7px; font-size: 14px; }
+        .btn-buy { background: var(--verde); color: white; border: none; padding: 12px; border-radius: 5px; cursor: pointer; width: 100%; font-size: 1rem; margin-top: 10px; }
     </style>
 </head>
 <body>
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K99V7XFX"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    
-    <header>
-        <h1>Parivaar <br><span>Alma de la India</span></h1>
-        <p>Danza, Yoga, Bodas y más...</p>
-    </header>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K99V7XFX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-    <section class="hero">
-        <h2>Clases y Shows para Eventos</h2>
-        <p>Vive la magia de la India y Medio Oriente</p>
-        <a href="https://wa.me/+523312695435" class="cta-button">Contratar Presentación</a>
-    </section>
+    <nav>
+        <button onclick="showSection('inicio')">Inicio</button>
+        <button onclick="showSection('ropa')">Ropa y Accesorios</button>
+        <button onclick="showSection('danza')">Danza</button>
+        <button onclick="showSection('henna')">Henna</button>
+        <button onclick="showSection('carrito')"><i class="fas fa-shopping-cart"></i> <span id="cart-counter">0</span></button>
+    </nav>
 
-    <section class="evento-proximo">
-        <h2 class="section-title">¡Próximo Evento!</h2>
-        <img src="imagen/taller_primavera.jpeg" alt="Próximo Evento de Danza India" style="max-width: 100%; height: auto; border-radius: 10px; margin: 20px 0;">
-        <p>Acompáñanos en nuestra próxima presentación temática. ¡Inscríbete ahora!</p>
-    </section>
+    <div id="inicio" class="section active" style="padding:0;">
+        <div class="hero">
+            <h1>Parivaar Alma de la India</h1>
+            <p style="font-size: 1.5rem;">Vive la magia de la India y Medio Oriente</p>
+            <button class="btn-buy" style="width:auto; padding: 15px 30px;" onclick="showSection('danza')">Ver Clases y Shows</button>
+        </div>
+        
+        <div style="padding: 50px 20px; text-align: center;">
+            <h2>Próximo Evento</h2>
+            <img src="imagen/taller_primavera.jpeg" alt="Próximo Evento" style="max-width: 100%; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.2);">
+        </div>
 
-    <h2 class="section-title">Galería de Arte</h2>
-    <div class="gallery">
-        <img src="imagen/punjabi.jpeg" alt="Danza India Punjabi">
-        <img src="imagen/chari.jpeg" alt="Danza India Chari">
-        <video controls>
-            <source src="video/evento1.mp4" type="video/mp4">
-            Tu navegador no soporta videos.
-        </video>
+       <section id="galeria-servicios" style="padding: 60px 20px; background: #fff; text-align: center;">
+            <h2 style="color: var(--naranja); margin-bottom: 40px;">Nuestra Esencia en Movimiento</h2>
+            <div class="grid">
+                <div class="card">
+                    <img src="imagen/costa.jpeg" alt="Clases Parivaar">
+                    <p style="font-weight: bold;">Clases Presenciales</p>
+                </div>
+                <div class="card">
+                    <video controls>
+                        <source src="video/evento1.mp4" type="video/mp4">
+                    </video>
+                    <p style="font-weight: bold;">Presentaciones en Vivo</p>
+                </div>
+                <div class="card">
+                    <img src="imagen/punjabi.jpeg" alt="Eventos Parivaar">
+                    <p style="font-weight: bold;">Talleres y Workshops</p>
+                </div>
+            </div>
+        </section>
     </div>
 
-    <div class="social-links">
-        <h2 class="section-title">Síguenos y Contáctanos</h2>
-        
-        <a href="https://instagram.com/parivaar_by_aishaguirre" target="_blank" title="Instagram">
-            <i class="fab fa-instagram"></i>
-        </a>
-        
-        <a href="https://tiktok.com/@aishaaguirre21" target="_blank" title="TikTok">
-            <i class="fab fa-tiktok"></i>
-        </a>
+    <section id="ropa" class="section">
+        <h2 style="color: var(--naranja); text-align: center;">Tienda de Ropa y Accesorios</h2>
+        <div class="grid">
+            <div class="card">
+                <img src="imagen/ropa1.jpeg" alt="Producto">
+                <h3>Sari Elegance</h3>
+                <p>Precio: $1,200.00</p>
+                <button class="btn-buy" onclick="addToCart('Sari Elegance', 1200)">Agregar al Carrito</button>
+            </div>
+        </div>
+    </section>
 
-        <a href="https://wa.me/+523312695435" target="_blank" title="WhatsApp">
-            <i class="fab fa-whatsapp"></i>
-        </a>
-    </div>
+    <section id="henna" class="section">
+        <h2 style="color: var(--naranja); text-align: center;">Arte Mehndi Halal y Orgánico</h2>
+        
+        <div style="max-width: 800px; margin: 0 auto 30px; text-align: center; line-height: 1.6;">
+            <p><strong>Pureza y Tradición:</strong> En Parivaar, respetamos nuestras raíces y creencias musulmanas. Utilizamos únicamente henna 100% orgánica, libre de toxinas y colorantes artificiales. Nuestra mezcla es segura para la piel y apta para el Wudu (Halal), permitiendo una experiencia artística ética y espiritual.</p>
+        </div>
 
-    <footer>
-        <p>&copy; 2026 NEO System - Impulsando el Arte Digital</p>
+        <div class="grid">
+            <div class="card">
+                <video controls>
+                    <source src="video/henna.mp4" type="video/mp4">
+                </video>
+                <p style="font-weight: bold;">Proceso de Aplicación</p>
+            </div>
+            <div class="card">
+                <img src="imagen/henna1.jpeg" alt="Arte Henna">
+                <p style="font-weight: bold;">Resultados Orgánicos</p>
+            </div>
+            <div class="card">
+                <video controls>
+                    <source src="video/promocional.mp4" type="video/mp4">
+                </video>
+                <p style="font-weight: bold;">Experiencia Parivaar</p>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 40px;">
+            <button class="btn-buy" style="width: auto; padding: 15px 40px; font-size: 1.2rem;" onclick="cotizarServicio('Henna')">
+                <i class="fab fa-whatsapp"></i> Solicitar Cotización de Henna
+            </button>
+        </div>
+    </section>
+
+    <section id="carrito" class="section">
+        <h2 style="text-align: center;">Mi Carrito de Compras</h2>
+        <div id="cart-items" style="max-width: 600px; margin: auto; background: white; padding: 20px; border-radius: 10px;"></div>
+        <h3 style="text-align: center;">Total a pagar: $<span id="cart-total">0</span></h3>
+        
+        <div style="max-width: 400px; margin: 30px auto; text-align: left;">
+            <label>Nombre Completo:</label>
+            <input type="text" id="cust-name" style="width:100%; padding:10px; margin: 10px 0;" placeholder="Ej. Aisha Aguirre">
+            
+            <label>Método de Pago:</label>
+            <select id="pay-method" style="width:100%; padding:10px; margin: 10px 0;">
+                <option value="Pago contra entrega">Pago contra entrega</option>
+                <option value="Depósito 50%">Depósito 50% (Anticipo)</option>
+                <option value="Pago Total">Pago Total por transferencia</option>
+            </select>
+            <button class="btn-buy" onclick="sendWhatsApp()">Finalizar y enviar a WhatsApp</button>
+        </div>
+    </section>
+
+    <section id="galeria-inferior" style="padding: 50px 20px; background: #fff;">
+        <h2 style="color: var(--naranja); margin-bottom: 30px; text-align: center;">Momentos Parivaar</h2>
+        <div class="grid">
+            <div class="card"><img src="imagen/chari.jpeg" alt="Danza"></div>
+            <div class="card"><img src="imagen/taller_primavera.jpeg" alt="Evento"></div>
+        </div>
+    </section>
+
+    <footer style="background: #333; color: white; padding: 60px 20px; text-align: center;">
+        <div class="social-links">
+            <h2 style="color: var(--naranja); font-size: 1.8rem; margin-bottom: 25px;">Conecta con nosotros</h2>
+            <div style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap;">
+                <a href="https://instagram.com/parivaar_by_aishaguirre" target="_blank" style="color: #E1306C;"><i class="fab fa-instagram"></i></a>
+                <a href="https://tiktok.com/@aishaaguirre21" target="_blank" style="color: #fff;"><i class="fab fa-tiktok"></i></a>
+                <a href="https://wa.me/523312695435" target="_blank" style="color: #25D366;"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+        <hr style="border: 0; border-top: 1px solid #555; width: 80%; margin: 40px auto;">
+        <div style="font-size: 0.9rem; line-height: 1.6;">
+            <p><strong>Parivaar Alma de la India</strong></p>
+            <p>Guadalajara, Jalisco, México</p>
+            <p>&copy; 2026 Desarrollado por <strong>NEO System</strong></p>
+        </div>
     </footer>
+
+    <script>
+        let cart = [];
+
+        function showSection(id) {
+            document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+            window.scrollTo(0,0);
+        }
+
+        function addToCart(name, price) {
+            cart.push({name, price});
+            updateCart();
+            alert("¡Agregado!");
+        }
+
+        function updateCart() {
+            document.getElementById('cart-counter').innerText = cart.length;
+            const container = document.getElementById('cart-items');
+            container.innerHTML = cart.length === 0 ? '<p>El carrito está vacío</p>' : '';
+            let total = 0;
+            cart.forEach((item, index) => {
+                total += item.price;
+                container.innerHTML += `<div style="display:flex; justify-content:space-between; margin-bottom:10px;">
+                    <span>${item.name}</span> <span>$${item.price} <button onclick="removeItem(${index})" style="border:none; color:red; cursor:pointer;">X</button></span>
+                </div>`;
+            });
+            document.getElementById('cart-total').innerText = total;
+        }
+
+        function removeItem(index) {
+            cart.splice(index, 1);
+            updateCart();
+        }
+
+        function cotizarServicio(servicio) {
+            let msg = `*SOLICITUD DE COTIZACIÓN - ${servicio.toUpperCase()}*%0A%0AHola, me gustaría recibir más información sobre sus servicios de ${servicio}.`;
+            window.open(`https://wa.me/523312695435?text=${msg}`, '_blank');
+        }
+
+        function sendWhatsApp() {
+            const name = document.getElementById('cust-name').value;
+            const pay = document.getElementById('pay-method').value;
+            if(!name) return alert("Ingresa tu nombre");
+            let resumen = cart.map(i => `- ${i.name} ($${i.price})`).join('%0A');
+            let msg = `*PEDIDO PARIVAAR*%0A%0A*Cliente:* ${name}%0A*Pedido:*%0A${resumen}%0A%0A*Total:* $${document.getElementById('cart-total').innerText}%0A*Pago:* ${pay}`;
+            window.open(`https://wa.me/523312695435?text=${msg}`, '_blank');
+        }
+    </script>
 </body>
 </html>
+
 
 
 
