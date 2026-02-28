@@ -233,16 +233,29 @@
 
     <script>
         let cart = [];
+
         function showSection(id) {
             document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
             document.getElementById(id).classList.add('active');
             window.scrollTo(0,0);
         }
+
         function addToCart(name, price) {
             cart.push({name, price});
             updateCart();
+            
+            // --- INICIO RASTREO NEO SYSTEM ---
+            // Esto le avisa a Meta que alguien se interesó en un producto
+            fbq('track', 'AddToCart', {
+                content_name: name,
+                value: price,
+                currency: 'MXN'
+            });
+            // --- FIN RASTREO ---
+
             alert("¡Agregado!");
         }
+
         function updateCart() {
             document.getElementById('cart-counter').innerText = cart.length;
             const container = document.getElementById('cart-items');
@@ -256,25 +269,47 @@
             });
             document.getElementById('cart-total').innerText = total;
         }
+
         function removeItem(index) {
             cart.splice(index, 1);
             updateCart();
         }
+
         function cotizarServicio(servicio) {
+            // --- INICIO RASTREO NEO SYSTEM ---
+            // Esto rastrea cuando alguien pregunta por Danza o Henna
+            fbq('track', 'Contact', {
+                content_category: servicio
+            });
+            // --- FIN RASTREO ---
+
             let msg = `*SOLICITUD DE INFORMES - ${servicio.toUpperCase()}*%0A%0AHola, me gustaría recibir más información sobre sus servicios y horarios de ${servicio}.`;
             window.open(`https://wa.me/523312695435?text=${msg}`, '_blank');
         }
+
         function sendWhatsApp() {
             const name = document.getElementById('cust-name').value;
             const pay = document.getElementById('pay-method').value;
+            const totalFinal = document.getElementById('cart-total').innerText;
+
             if(!name) return alert("Ingresa tu nombre");
+
+            // --- INICIO RASTREO NEO SYSTEM ---
+            // Esto registra la compra finalizada para tu Analítica
+            fbq('track', 'Purchase', {
+                value: totalFinal,
+                currency: 'MXN'
+            });
+            // --- FIN RASTREO ---
+
             let resumen = cart.map(i => `- ${i.name} ($${i.price})`).join('%0A');
-            let msg = `*PEDIDO PARIVAAR*%0A%0A*Cliente:* ${name}%0A*Pedido:*%0A${resumen}%0A%0A*Total:* $${document.getElementById('cart-total').innerText}%0A*Pago:* ${pay}`;
+            let msg = `*PEDIDO PARIVAAR*%0A%0A*Cliente:* ${name}%0A*Pedido:*%0A${resumen}%0A%0A*Total:* $${totalFinal}%0A*Pago:* ${pay}`;
             window.open(`https://wa.me/523312695435?text=${msg}`, '_blank');
         }
     </script>
 </body>
 </html>
+
 
 
 
