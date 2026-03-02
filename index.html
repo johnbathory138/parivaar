@@ -63,7 +63,8 @@
         .social-links a:hover { transform: scale(1.2); color: var(--naranja); }
         
         #cart-counter { background: #e74c3c; color: white; border-radius: 50%; padding: 2px 7px; font-size: 14px; }
-        .btn-buy { background: var(--verde); color: white; border: none; padding: 12px; border-radius: 5px; cursor: pointer; width: 100%; font-size: 1rem; margin-top: 10px; }
+        .btn-buy { background: var(--verde); color: white; border: none; padding: 12px; border-radius: 5px; cursor: pointer; width: 100%; font-size: 1rem; margin-top: 10px; transition: 0.3s; }
+        .btn-buy:hover { background: #0e6606; transform: translateY(-2px); }
     </style>
 </head>
 <body>
@@ -84,21 +85,28 @@
             <button class="btn-buy" style="width:auto; padding: 15px 30px;" onclick="showSection('danza')">Ver Clases y Shows</button>
         </div>
         
-        <div style="padding: 50px 20px; text-align: center;">
-    <h2>Próximos Eventos</h2>
-    
-    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; max-width: 1200px; margin: auto;">
-        
-        <div style="flex: 1; min-width: 300px; max-width: 500px;">
-            <img src="imagen/taller_primavera.jpeg" alt="Taller Primavera" style="width: 100%; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.2);">
+        <div style="padding: 50px 20px; text-align: center; background: #fdfdfd;">
+            <h2 style="color: var(--naranja);">Próximos Eventos</h2>
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; max-width: 1100px; margin: auto;">
+                
+                <div style="flex: 1; min-width: 300px; max-width: 450px; background: white; padding: 15px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                    <img src="imagen/taller_primavera.jpeg" alt="Taller Primavera" style="width: 100%; border-radius: 10px;">
+                    <button class="btn-buy" onclick="cotizarServicio('Taller de Primavera')">
+                        <i class="fab fa-whatsapp"></i> Apartar lugar Taller
+                    </button>
+                </div>
+
+                <div style="flex: 1; min-width: 300px; max-width: 450px; background: white; padding: 15px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                    <img src="imagen/andador.jpeg" alt="Bollywood y Henna" style="width: 100%; border-radius: 10px;">
+                    <button class="btn-buy" onclick="cotizarServicio('Evento Andador Chapultepec')">
+                        <i class="fab fa-whatsapp"></i> Info Andador Chapultepec
+                    </button>
+                </div>
+
+            </div>
         </div>
 
-        <div style="flex: 1; min-width: 300px; max-width: 500px;">
-            <img src="imagen/andador.jpeg" alt="Bollywood y Henna" style="width: 100%; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.2);">
-    </div>
-
-    </div>
-       <section id="galeria-servicios" style="padding: 60px 20px; background: #fff; text-align: center;">
+        <section id="galeria-servicios" style="padding: 60px 20px; background: #fff; text-align: center;">
             <h2 style="color: var(--naranja); margin-bottom: 40px;">Nuestra Esencia en Movimiento</h2>
             <div class="grid">
                 <div class="card">
@@ -215,34 +223,17 @@
     </section>
 
     <section id="faq" style="padding: 60px 20px; background: #eee;">
-    <h2 style="text-align: center; color: var(--naranja);">Preguntas Frecuentes</h2>
-    <div style="max-width: 800px; margin: auto;">
-        <details style="background: white; padding: 15px; margin-bottom: 10px; border-radius: 10px; cursor: pointer;">
-            <summary style="font-weight: bold;">¿Necesito experiencia previa para la danza?</summary>
-            <p style="margin-top: 10px;">¡Para nada! Tenemos niveles desde principiantes hasta avanzados.</p>
-        </details>
-        <details style="background: white; padding: 15px; margin-bottom: 10px; border-radius: 10px; cursor: pointer;">
-            <summary style="font-weight: bold;">¿La henna es orgánica?</summary>
-            <p style="margin-top: 10px;">Sí, es 100% natural y segura para todo tipo de piel.</p>
-        </details>
-        <details style="background: white; padding: 15px; margin-bottom: 10px; border-radius: 10px; cursor: pointer;">
-            <summary style="font-weight: bold;">¿La henna es segura para niños o piel sensible?</summary>
-            <p style="margin-top: 10px;">Sí, nuestra henna es 100% orgánica y artesanal, libre de químicos negros (PPD). Es segura para niños, embarazadas y pieles delicadas.</p>
-        </details>
-        <details style="background: white; padding: 15px; margin-bottom: 10px; border-radius: 10px; cursor: pointer;">
-            <summary style="font-weight: bold;">¿Cómo funcionan las clases en línea?</summary>
-            <p style="margin-top: 10px;">Se imparten vía Meet en tiempo real. Recibes correcciones personalizadas y acceso a la grabación de la clase para que practiques durante la semana.</p>
-        </details>
-        <details style="background: white; padding: 15px; margin-bottom: 10px; border-radius: 10px; cursor: pointer;">
-            <summary style="font-weight: bold;">¿Hacen eventos fuera de Guadalajara?</summary>
-            <p style="margin-top: 10px;">¡Sí! Llevamos la magia de la India a cualquier parte de México. Solo contáctanos para cotizar viáticos y disponibilidad de fechas.</p>
-        </details>
-        <details style="background: white; padding: 15px; margin-bottom: 10px; border-radius: 10px; cursor: pointer;">
-            <summary style="font-weight: bold;">¿Qué métodos de pago aceptan?</summary>
-            <p style="margin-top: 10px;">Aceptamos transferencias bancarias, depósitos en OXXO y pago en efectivo directamente en la academia.</p>
-        </details>
-    </div>
-        
+        <h2 style="text-align: center; color: var(--naranja);">Preguntas Frecuentes</h2>
+        <div style="max-width: 800px; margin: auto;">
+            <details style="background: white; padding: 15px; margin-bottom: 10px; border-radius: 10px; cursor: pointer;">
+                <summary style="font-weight: bold;">¿Necesito experiencia previa para la danza?</summary>
+                <p style="margin-top: 10px;">¡Para nada! Tenemos niveles desde principiantes hasta avanzados.</p>
+            </details>
+            <details style="background: white; padding: 15px; margin-bottom: 10px; border-radius: 10px; cursor: pointer;">
+                <summary style="font-weight: bold;">¿La henna es orgánica?</summary>
+                <p style="margin-top: 10px;">Sí, es 100% natural y segura para todo tipo de piel.</p>
+            </details>
+        </div>
     </section>
 
     <footer style="background: #333; color: white; padding: 60px 20px; text-align: center;">
@@ -254,16 +245,6 @@
                 <a href="https://wa.me/523312695435" target="_blank" style="color: #25D366;"><i class="fab fa-whatsapp"></i></a>
             </div>
         </div>
-
-        <div style="margin: 30px 0; font-size: 1rem; color: #bbb;">
-            <h3 style="color: var(--naranja); margin-bottom: 10px;">Horario de Atención</h3>
-            <p><i class="far fa-clock"></i> Lunes a Viernes: 10:00 AM - 8:00 PM</p>
-            <p><i class="far fa-clock"></i> Sábados: 10:00 AM - 2:00 PM</p>
-            <p>Domingos: Cerrado</p>
-        </div>
-
-        <hr style="border: 0; border-top: 1px solid #555; width: 80%; margin: 40px auto;">
-        
         <div style="font-size: 0.9rem; line-height: 1.6;">
             <p><strong>Parivaar Alma de la India</strong></p>
             <p>Guadalajara, Jalisco, México</p>
@@ -283,16 +264,7 @@
         function addToCart(name, price) {
             cart.push({name, price});
             updateCart();
-            
-            // --- INICIO RASTREO NEO SYSTEM ---
-            // Esto le avisa a Meta que alguien se interesó en un producto
-            fbq('track', 'AddToCart', {
-                content_name: name,
-                value: price,
-                currency: 'MXN'
-            });
-            // --- FIN RASTREO ---
-
+            fbq('track', 'AddToCart', { content_name: name, value: price, currency: 'MXN' });
             alert("¡Agregado!");
         }
 
@@ -316,14 +288,8 @@
         }
 
         function cotizarServicio(servicio) {
-            // --- INICIO RASTREO NEO SYSTEM ---
-            // Esto rastrea cuando alguien pregunta por Danza o Henna
-            fbq('track', 'Contact', {
-                content_category: servicio
-            });
-            // --- FIN RASTREO ---
-
-            let msg = `*SOLICITUD DE INFORMES - ${servicio.toUpperCase()}*%0A%0AHola, me gustaría recibir más información sobre sus servicios y horarios de ${servicio}.`;
+            fbq('track', 'Contact', { content_category: servicio });
+            let msg = `*SOLICITUD DE INFORMES - ${servicio.toUpperCase()}*%0A%0AHola, me gustaría recibir más información sobre: ${servicio}.`;
             window.open(`https://wa.me/523312695435?text=${msg}`, '_blank');
         }
 
@@ -331,17 +297,8 @@
             const name = document.getElementById('cust-name').value;
             const pay = document.getElementById('pay-method').value;
             const totalFinal = document.getElementById('cart-total').innerText;
-
             if(!name) return alert("Ingresa tu nombre");
-
-            // --- INICIO RASTREO NEO SYSTEM ---
-            // Esto registra la compra finalizada para tu Analítica
-            fbq('track', 'Purchase', {
-                value: totalFinal,
-                currency: 'MXN'
-            });
-            // --- FIN RASTREO ---
-
+            fbq('track', 'Purchase', { value: totalFinal, currency: 'MXN' });
             let resumen = cart.map(i => `- ${i.name} ($${i.price})`).join('%0A');
             let msg = `*PEDIDO PARIVAAR*%0A%0A*Cliente:* ${name}%0A*Pedido:*%0A${resumen}%0A%0A*Total:* $${totalFinal}%0A*Pago:* ${pay}`;
             window.open(`https://wa.me/523312695435?text=${msg}`, '_blank');
@@ -349,6 +306,7 @@
     </script>
 </body>
 </html>
+
 
 
 
